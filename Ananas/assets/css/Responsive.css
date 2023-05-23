@@ -1,0 +1,131 @@
+﻿.nav__mobile ul>li{
+    color:#000;
+    padding:10px 0;
+    list-style:none;
+}
+mobile__main--item:hover {
+    background-color: #f15e2c;
+}
+li.mobile__main--user {
+    list-style: none;
+    padding: 10px 0;
+}
+.nav__mobile a {
+    color: #333;
+    text-align:center;
+}
+.nav__mobile--btn {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+.mobile__main{
+    display:none;
+}
+.mobile__main--search,
+.mobile__main--cart{
+    float:left;
+    margin:50px 0px 0px 0px;
+    padding-left:50px;
+    font-size:23px;
+    font-weight:bold;
+}
+.mobile__main--cart a{
+    color:#333;
+}
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    display: none;
+    z-index: 999;
+    animation: fade linear 0.3s;
+}
+.nav__mobile {
+    text-align: center;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    transform: translateX(+100%);
+    display: none;
+    animation: fade linear 0.3s;
+    transition:transform linear 0.3s;
+}
+
+.close--btn {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.nav-mobile-input {
+    display: none;
+}
+
+    .nav-mobile-input:checked ~ .nav__overlay {
+        display: block;
+    }
+
+    .nav-mobile-input:checked ~ .nav__mobile {
+        display: block;
+        transform: translateX(0);
+    }
+/*Navbar responsive*/
+@media(max-width: 1023px) {
+    .header__main--logo{
+        float:left;
+    }
+    .nav__mobile--btn {
+        display: block;
+        float: right;
+        margin: 40px 20px 0px 0px;
+    }
+    .mobile__main{
+        display:block;
+        float:left;
+    }
+    .nav__pc {
+        display: none;
+    }
+
+    .header__navbar {
+        display: none;
+    }
+}
+/*All responsive*/
+@media(max-width:1023px) {
+    .collection--item {
+        width: 100%;
+    }
+    .collection--item .collection-img {
+        max-height: 100%;
+    }
+    .container__main--bestseller .bestseller--item {
+        width:50%;
+    }
+    .list__view-item{
+        width:50%;
+    }
+}
+@media(max-width:845px) {
+    .mobile__main--search,
+    .mobile__main--cart {
+        padding-left:10px;
+    }
+} 
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

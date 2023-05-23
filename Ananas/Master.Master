@@ -1,0 +1,180 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Ananas.Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ananas</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/min.css"/>
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/css/Responsive.css"/>
+
+</head>
+<body>
+    <div class="web">
+        <!-- Header -->
+        <header class="header col-12">
+            <!--Header nav-->
+            <div class="header__navbar" id="header__navbar" runat="server">
+                
+            </div>
+            <!--End header nav-->
+
+            <!--Header main-->
+            <div class="row header__main">
+                <div class="header__main--logo">
+                    <a href="Home.aspx"><img src="./assets/img/Logo_Ananas.png" alt=""></a>
+                </div>
+                <div class="nav__pc">
+                    <ul class="nav--list">
+                        <li class="header__main--select">
+                            <ul class="header__main--list">
+                                <li class="header__main--item header__main--seperate">
+                                    <a href="Product.aspx">SẢN PHẨM <i class="fa-solid fa-sort-down"></i></a>
+                                    <ul class="subnav">
+                                        <li><a href="Product.aspx">NAM</a></li>
+                                         <li><a href="Product.aspx">NỮ</a></li>
+                                    </ul>
+                                </li>
+                                <li class=" header__main--item ">
+                                    <a href="">SALE OFF</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__main--search ">
+                            <form class="header__main--search">
+                                <input type="text" name="search" placeholder="Tìm kiếm sản phẩm " />
+                                <button><i class="fa-solid fa-magnifying-glass "></i></button>
+                            </form>
+                        </li>
+                        <li class="header__main--cart ">
+                            <a href="Cart.aspx">
+                                <i class="fa-solid fa-cart-shopping "></i> GIỎ HÀNG -
+                                <span class="cart-warning ">
+                                    <span><asp:Label ID="TotalPro" runat="server" Text="Label"></asp:Label></span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row mobile__main">
+                    <div class="mobile__main--search">
+                            <form class="header__mobile--search">
+                                <input type="text" name="search" placeholder="Tìm kiếm sản phẩm " />
+                                <button><i class="fa-solid fa-magnifying-glass "></i></button>
+                            </form>
+                        </div>
+                        <div class="mobile__main--cart">
+                            <a href="Cart.aspx">
+                                <i class="fa-solid fa-cart-shopping "></i> GIỎ HÀNG -
+                                <span class="cart-warning ">
+                                    <span><asp:Label ID="TotalPro1" runat="server" Text="Label"></asp:Label></span>
+                                </span>
+                            </a>
+                        </div>
+                </div>
+                <label for="nav-mobile-input" class="nav__mobile--btn">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path></svg>
+                </label>
+
+                <input type="checkbox" class="nav-mobile-input" id="nav-mobile-input"/>
+
+                <div class="nav__overlay">
+                </div>
+
+                <div class="nav__mobile">
+                    <label for="nav-mobile-input" class="row nav__mobile--close">
+                        <div class="close--btn">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"></path></svg>
+                        </div>
+                    </label>
+                    <div class="mobile__nav--list">
+                        <div class="mobile__main--select">
+                            <ul class="mobile__main--list">
+                                <li class="mobile__main--item">
+                                    <a href="Product.aspx">SẢN PHẨM</a>
+                                </li>
+                                <li>
+                                    <a href="Product.aspx">NAM</a>
+
+                                </li>
+                                <li>
+                                    <a href="Product.aspx">NỮ</a>
+                                </li>
+                                <li class=" mobile__main--item ">
+                                    <a href=" ">SALE OFF</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile__main--user">
+                            <div class="user__action" id="user" runat="server">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--End Header main-->
+            <hr width="60%">
+        </header>
+        <!--Main web-->
+        <div class="container col-12">
+           <asp:ContentPlaceHolder ID="Maincontents" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--END Main web-->
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="row footer--list col-10">
+                <div class="footer--item col-4">
+                    <div class="footer--title">
+                        <h3>LIÊN HỆ</h3>
+                    </div>
+                    <div class="footer--content">
+                        <ul>
+                            <li>Địa chỉ: 96 Định Công, Thanh Xuân, Hà Nội </li>
+                            <li>Email: patuan1303@gmail.com</li>
+                            <li>Hotline: 0965 239 954</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer--item col-4">
+                    <div class="footer--title">
+                        <h3>HỖ TRỢ</h3>
+                    </div>
+                    <div class="footer--content">
+                        <ul>
+                            <li>Phương thức vận chuyển </li>
+                            <li>Phương thức thanh toán</li>
+                            <li>Chính sách đối với khách hàng</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer--item col-4">
+                    <div class="footer--title">
+                        <h3>DỊCH VỤ</h3>
+                    </div>
+                    <div class="footer--content">
+                        <ul>
+                            <li>Giới thiệu về Ananas</li>
+                            <li>Chính sách bảo mật</li>
+                            <li>Hệ thống phân phối</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <h3>Copyright © 2022 Ananas. All rights reserved</h3>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/main.js">
+    </script>
+    
+</body>
+</html>
